@@ -4,30 +4,33 @@ padding:0;
 box-sizing:border-box;
 }
 
-/* Full Page Layout */
-html, body{
+/* PAGE STRUCTURE */
+
+html,body{
 height:100%;
 display:flex;
 flex-direction:column;
-}
-
-/* Body */
-body{
 font-family:Arial, Helvetica, sans-serif;
 background:#f4f6f8;
 color:#333;
-line-height:1.6;
 }
 
-/* Header */
+/* HEADER */
+
 header{
 background:linear-gradient(135deg,#2c3e50,#34495e);
 color:white;
 text-align:center;
-padding:40px;
+padding:40px 20px;
 }
 
-/* Navbar */
+header h1{
+font-size:28px;
+margin-bottom:10px;
+}
+
+/* NAVBAR */
+
 nav{
 background:#1f2d3d;
 text-align:center;
@@ -37,7 +40,7 @@ padding:15px;
 nav a{
 color:white;
 text-decoration:none;
-margin:0 20px;
+margin:0 15px;
 font-weight:bold;
 font-size:16px;
 transition:0.3s;
@@ -47,25 +50,27 @@ nav a:hover{
 color:#f1c40f;
 }
 
-/* Hero Section */
+/* HERO SECTION */
+
 .hero{
 text-align:center;
-padding:60px 20px;
+padding:50px 20px;
 }
 
 .hero h2{
-font-size:32px;
+font-size:30px;
+margin-bottom:10px;
 color:#2c3e50;
-margin-bottom:15px;
 }
 
 .hero p{
-max-width:650px;
+max-width:700px;
 margin:auto;
 color:#555;
 }
 
-/* Feature Cards */
+/* FEATURES SECTION */
+
 .features{
 display:flex;
 justify-content:center;
@@ -73,6 +78,8 @@ gap:25px;
 padding:40px;
 flex-wrap:wrap;
 }
+
+/* CARD DESIGN */
 
 .card{
 background:white;
@@ -85,7 +92,8 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 .card h3{
@@ -93,7 +101,8 @@ color:#2c3e50;
 margin-bottom:10px;
 }
 
-/* Components Section */
+/* COMPONENTS SECTION */
+
 .components{
 display:flex;
 justify-content:center;
@@ -102,7 +111,6 @@ gap:30px;
 padding:40px;
 }
 
-/* Component Card */
 .component-card{
 background:white;
 width:220px;
@@ -125,68 +133,20 @@ border-radius:8px;
 margin-bottom:10px;
 }
 
-/* Container Layout */
-.container{
-width:80%;
-margin:auto;
-padding:40px 0;
-}
+/* ABOUT SECTION */
 
-/* About Cards Section */
-.about-cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-padding:20px;
-}
-
-/* About Card */
-.about-card{
-background:white;
-width:260px;
-padding:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-text-align:center;
-transition:0.3s;
-}
-
-.about-card:hover{
-transform:translateY(-8px);
-}
-
-.about-card h3{
-color:#2c3e50;
-margin-bottom:10px;
-}
-
-.about-card p{
-color:#555;
-font-size:14px;
-}
-
-/* Working Section */
 .about-section{
 background:white;
 padding:30px;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.1);
 line-height:1.7;
-margin-top:20px;
+margin:20px auto;
+width:80%;
 }
 
-.about-section h2{
-color:#2c3e50;
-margin-bottom:10px;
-}
+/* FOOTER */
 
-.about-section p{
-color:#555;
-margin-bottom:15px;
-}
-
-/* Footer */
 footer{
 margin-top:auto;
 background:#2c3e50;
@@ -194,4 +154,45 @@ color:white;
 text-align:center;
 padding:15px;
 font-size:14px;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width:768px){
+
+header h1{
+font-size:20px;
+}
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+.hero h2{
+font-size:24px;
+}
+
+.features{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+}
+
+.components{
+flex-direction:column;
+align-items:center;
+}
+
+.component-card{
+width:90%;
+}
+
+.about-section{
+width:90%;
+}
+
 }
