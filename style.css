@@ -164,6 +164,24 @@ color:#2c3e50;
 color:#555;
 line-height:1.6;
 }
+/* IMAGE CARD */
+
+.image-card{
+margin-top:30px;
+display:flex;
+justify-content:center;
+}
+
+.image-card img{
+width:350px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.image-card img:hover{
+transform:scale(1.05);
+}
 
 /* FOOTER */
 
